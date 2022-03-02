@@ -1,0 +1,41 @@
+{
+  "name": "virtualgamepad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "Eduard Anton",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^17.1.0",
+    "electron-builder": "^22.14.13"
+  },
+  "dependencies": {
+    "eventemitter2": "^6.4.5",
+    "vigemclient": "^1.3.0"
+  },
+  "build": {
+    "productName": "VirtualGamepad",
+    "appId": "com.eduardanton.virtualgamepad",
+    "icon": "src/icon.ico",
+    "files": [
+      "**/*"
+    ],
+    "extraFiles": [
+      "ViGEmBusSetup_x64.msi",
+      "winpy.exe"
+    ],
+    "win": {
+      "icon": "src/icon.ico",
+      "artifactName": "${productName}-${version}.${ext}",
+      "publisherName": "Eduard Anton",
+      "target": [
+        "nsis"
+      ]
+    }
+  }
+}

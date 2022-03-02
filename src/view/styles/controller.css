@@ -1,0 +1,29 @@
+#gamepad {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+.gamepad-btn:hover {
+    fill: white !important;
+}
+
+.selected-btn {
+    fill: white !important;
+}
+
+.assign-btn {
+    animation: blink_anim normal 1.5s infinite ease-in-out;
+}
+
+@keyframes blink_anim {
+    0% {
+           fill: rgba(255,0,0,1)
+    }
+    50% {
+            fill: rgba(255,0,0,0.3)
+    }
+    100% {
+            fill: rgba(255,0,0,1)
+    }
+}
